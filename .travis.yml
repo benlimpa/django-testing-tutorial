@@ -1,0 +1,5 @@
+language: python
+install:
+  - pip install django coverage
+script:
+  - coverage run --source=. manage.py test -v 2
