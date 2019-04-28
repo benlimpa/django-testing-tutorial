@@ -1,9 +1,10 @@
 dist: xenial
 language: python
 install:
-- pip install django coverage
+- pip install pipenv
+- pipenv install
 script:
-- coverage run --source=. manage.py test -v 2
+- pipenv run coverage run --source=. manage.py test -v 2
 deploy:
   provider: heroku
   api_key:
