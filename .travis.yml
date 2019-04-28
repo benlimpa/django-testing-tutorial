@@ -1,8 +1,7 @@
 dist: xenial
 language: python
 install:
-- pip install pipenv
-- pipenv install
+- pipenv install --dev
 script:
 - coverage run --source=. manage.py test -v 2
 after_success:
