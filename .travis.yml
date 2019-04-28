@@ -5,6 +5,8 @@ install:
 - pipenv install
 script:
 - pipenv run coverage run --source=. manage.py test -v 2
+after_success:
+- coveralls
 deploy:
   provider: heroku
   api_key:
