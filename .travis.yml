@@ -1,6 +1,13 @@
 dist: xenial
 language: python
 install:
-  - pip install django coverage
+- pip install django coverage
 script:
-  - coverage run --source=. manage.py test -v 2
+- coverage run --source=. manage.py test -v 2
+deploy:
+  provider: heroku
+  api_key:
+    secure: PughhQCwfwJ6UiHczh46Op7kHoECOBx7+t3zxV/z+h4lSzyYOuTQoeuFkORo2y2Z1fBIRC6CsMlPhE4Pe3/PG/eGU8JV+rQgNXI5BYEZNjf2EnasgmiesI3bhaw951L/56XAlHN5tCK6afvuUKRhf8mGlJFJI3jA6tAOyYocKWYTqeoqVeffQYF7QoCITLTEYt0pTkONs7gf47S231g4ONOw0osUdf8zZVUFh6RpE7a9cZ+XGlSFTeTvBfudXNP8Lra2KX//CRcHu2RZn/PJwx3nVds6jfKZRiblIJ3LzK8R0nPa0MeC2tITbKsHkna5nXLLZ/n+FPEjdFA9Pi42Z/AWssxg+0D/c2K3m/4Y/8hdgUAXXHmWAa0BV+nTL8vrAOH8edubSghckQD1im0bbUGuUtisGkEfHMTB0Ren/LMqtSubE4cr6QamQJJwKeKoRFzO9NpVGHc07VXw5S/C4xx5WaT8vjM3px32V7wH/yXD5YMjmdchmy7ILdcWCilcxao4DxKHbFrryaP+AyxP7ZDMWL6R7U6WKCN9U9kBjft06px8s9/uvVdH79rUwFzYYRGV9ilOirV0Qi3Cy7yAcOB1tsIin+rv5Aey7nRfWmiSIWL60uTQWSbJeVw65tUvyHOW1UQk9Xb1Zb01iVG76rAsXhsxfFOs/k3AbwNsvbU=
+  app: murmuring-chamber-26277
+  on:
+    repo: benlimpa/django-testing-tutorial
