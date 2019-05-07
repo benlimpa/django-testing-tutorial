@@ -8,3 +8,4 @@ Diagram:
 ![CI Diagram](http://homepi.limpanu.com/pub/cicddiagram.png)
 
 For [Django Testing Tutorial](https://wsvincent.com/django-testing-tutorial).
+test
